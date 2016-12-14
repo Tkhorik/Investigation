@@ -1,8 +1,5 @@
 package ru.maven;
 
-/**
- * Created by MaRV on 11/28/2016.
- */
 public class Company {
     private Company parent;
     private long employeeCount;

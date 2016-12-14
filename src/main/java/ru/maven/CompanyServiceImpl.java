@@ -3,15 +3,11 @@ package ru.maven;
 import java.util.List;
 
 
-public class CompanyServiceImpl implements ICompanyService {
+class CompanyServiceImpl implements ICompanyService {
     @Override
     public Company getTopLevelParent(Company child) {
         Company result = child;
-        if (child.getParent() != null) {
-
-            result = this.getTopLevelParent(child.getParent());
-
-        }
+        if (child.getParent() != null) this.getTopLevelParent(child.getParent());
         return child;
     }
 
